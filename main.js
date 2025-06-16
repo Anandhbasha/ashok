@@ -81,8 +81,80 @@
         
 
     //Ternary opeartor
-        let age = 17
-        console.log(age>=18?"Adult":"Teenager");
+        let age = 8
+        // console.log(age>=18?"Adult":"Teenager");
         
-    
+    //Conditional Statements
+        // if
+            if(age>=18){
+                console.log("He is an Adult");                
+            }
+        // if else
+            if(age>=18){
+                console.log("He is an Adult");                
+            }
+            else{
+                console.log("Tennager");
+            }
+        //esle if
+            if(age>=18){
+                console.log("He is an Adult");                
+            }
+            else if(age<=10){
+                console.log("He is Child");
+                
+            }
+            else{
+                console.log("Tennager");
+            }
+    //Switch
+            let today = "Thursday";
+            switch(today){
+                case "Monday":
+                    console.log("Today is Monday");
+                    break
+                case "Tuesday":
+                    console.log("Today is Tuesday");
+                    break
+                case "Wednesday":
+                    console.log("Today is Wednesday");
+                    break
+                case "Thursday":
+                    console.log("Today is Thursday");
+                    break
+                case "Friday":
+                    console.log("Today is Friday");
+                    break
+                case "Saturday":
+                    console.log("Today is Saturday");
+                    break
+                default :
+                    console.log("Today is Sunday");
+                    
+            }
+    //loops
+        // while
+        // let val1 = 10
+        let val_2 = 20
+        // while(val1<val_2){
+        //     val1++
+        //     console.log("While is workong");
+            
+        // }
+
+        // do while
+        // do{
+        //     console.log("Do while working");
+            
+        // }while(val1>val_2)
+
+        // for loop
+            for(let val1= 10;val1<val_2;val1++){
+                console.log("For is working");
+                
+            }
+        
+        
+
+
     
