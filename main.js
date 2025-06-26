@@ -403,4 +403,118 @@ let button = document.getElementById('btn')
     }
     //onsubmit
 
+    //Async
+        // Promise
+        let bookTicket = new Promise((resolved,reject)=>{
+            let success = false
+            if(success){
+                resolved("Ticket Booked Succesfully")
+            }
+            else{
+                reject("Unable to book the ticket")
+            }
+        })
+        bookTicket.then((result)=>{
+            console.log(result);
+            
+        }).catch((err)=>{
+            console.log(err);            
+        })
+        //race
+        let friend1 = new Promise((resolved,reject)=>{
+            let reached = false
+            if(reached){
+                resolved("Friend1 Reached Home")
+            }else{
+                reject("Friend1 Not yet reached")
+            }
+        })
+        let friend2 = new Promise((resolved,reject)=>{
+            let reached = true
+            if(reached){
+                resolved("Friend2 Reached Home")
+            }else{
+                reject("Friend2 Not yet reached")
+            }
+        })
+        let friend3 = new Promise((resolved,reject)=>{
+            let reached = false
+            if(reached){
+                resolved("Friend3 Reached Home")
+            }else{
+                reject("Friend3 Not yet reached")
+            }
+        })
+        let friend4 = new Promise((resolved,reject)=>{
+            let reached = true
+            setTimeout(()=>{
+                if(reached){
+                resolved("Friend4 Reached Home")
+            }else{
+                reject("Friend4 Not yet reached")
+            }
+            },5000)
+        })
+        Promise.race([friend1,friend2,friend3,friend4]).then((res)=>{
+            console.log(res)          
+        }).catch((err)=>{
+            console.log(err)            
+        })
+        //any
+        Promise.any([friend1,friend2,friend3,friend4]).then((res)=>{
+            console.log(res)          
+        }).catch((err)=>{
+            console.log(err)            
+        })
+        //all
+        Promise.all([friend1,friend2,friend3,friend4]).then((res)=>{
+            console.log(res)          
+        }).catch((err)=>{
+            console.log(err)            
+        })
+        //allSettled
+        Promise.allSettled([friend1,friend2,friend3,friend4]).then((res)=>{
+            console.log(res)          
+        }).catch((err)=>{
+            console.log(err)            
+        })
+
+
+        //fetch Method
+        // let fetchData = new Promise((resolved,reject)=>{
+        //     fetch('https://jsonplaceholder.typicode.com/todos').then((res)=>{
+        //         console.log(res);
+                
+        //         if(!res.ok){
+        //             reject("Unable to connect API")
+        //         }
+        //         else{
+        //             resolved(res.json())
+        //         }
+        //     })
+        // })
+        // fetchData.then((result)=>{
+        //     console.log(result)           
+        // }).catch((err)=>{
+        //     console.log(err);
+            
+        // })
+        //async
+        let fetchData = async()=>{
+            try {
+                let res = await fetch('https://jsonplaceholder.typicode.com/todos')
+                if(!res.ok){
+                    throw Error("Unable to connect API");                
+                }
+                else{
+                    const data = await res.json()
+
+                    console.log(data)                
+                }
+            } catch (error) {
+                console.log(error);
+                
+            }
+        }
+        fetchData()
     
