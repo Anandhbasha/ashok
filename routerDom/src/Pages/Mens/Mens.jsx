@@ -1,8 +1,16 @@
-import React from 'react'
+import React, { useContext } from 'react'
+import { passingValue } from '../../App'
 
-const Mens = () => {
+const Mens = ({value}) => {
+  const {btnValues} = useContext(passingValue)
   return (
-    <div>Mens</div>
+    <div className='Mens'>
+      {
+        btnValues.map((item)=>(
+          <button>{item}</button>
+        ))
+      }
+    </div>
   )
 }
 
