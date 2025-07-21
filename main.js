@@ -509,31 +509,31 @@
 //                 else{
 //                     const data = await res.json()
 
-//                     console.log(data)                
-//                 }
-//             } catch (error) {
-//                 console.log(error);
+// //                     console.log(data)                
+// //                 }
+// //             } catch (error) {
+// //                 console.log(error);
                 
-//             }
-//         }
-//         fetchData()
-    // DOM - Document Object Module
-    let form = document.getElementById('form')
-    let forms = document.getElementsByClassName('form')
-    let forms1 = document.getElementsByTagName('form')
-    let forms2 = document.querySelector('.form')
-    let forms3 = document.querySelector('#form')
-    let forms4 = document.querySelectorAll('#form')
+// //             }
+// //         }
+// //         fetchData()
+//     // DOM - Document Object Module
+//     let form = document.getElementById('form')
+//     let forms = document.getElementsByClassName('form')
+//     let forms1 = document.getElementsByTagName('form')
+//     let forms2 = document.querySelector('.form')
+//     let forms3 = document.querySelector('#form')
+//     let forms4 = document.querySelectorAll('#form')
 
-    let btn = document.createElement('button')
-    btn.textContent = "Submit"
-    // btn.innerHTML="Login"
-    // btn.innerText="Click"
-    document.body.append(btn)
-    let input= document.createElement('input')
-    input.setAttribute('type',"Number")
-    input.setAttribute('placeholder',"enter your number")
-    form.appendChild(input)
+//     let btn = document.createElement('button')
+//     btn.textContent = "Submit"
+//     // btn.innerHTML="Login"
+//     // btn.innerText="Click"
+//     document.body.append(btn)
+//     let input= document.createElement('input')
+//     input.setAttribute('type',"Number")
+//     input.setAttribute('placeholder',"enter your number")
+//     form.appendChild(input)
 
     // table
     //thead
@@ -541,3 +541,19 @@
     // tbody
     //tr
     //td
+
+
+    array = [80,90,60,40,99]
+
+    // array.map((item)=>{
+    //     console.log(item);
+        
+    // // })
+    // array.forEach((item)=>{
+    //     console.log(item);
+        
+    // })
+    odd = array.filter((x)=>x%2!=0)
+// console.log(odd);
+total = array.reduce((a,b)=>a+b)
+console.log(total);
